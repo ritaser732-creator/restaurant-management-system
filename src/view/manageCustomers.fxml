@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="800.0" spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.ManageCustomersController">
+<padding>
+<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+</padding>
+<Label text="ניהול לקוחות (Manage Customers)">
+<font>
+<Font name="System Bold" size="24.0" />
+</font>
+</Label>
+<!-- Search -->
+<HBox alignment="CENTER_LEFT" spacing="10.0">
+<TextField fx:id="fldSearchCode" promptText="Enter Customer Code (e.g. C0001)" prefWidth="200.0"/>
+<Button text="חיפוש (Search)" onAction="#handleSearchCustomer"/>
+<Button text="נקה (Clear)" onAction="#handleClearSearch"/>
+</HBox>
+<!-- Table Customers -->
+<TableView fx:id="tblCustomers" prefHeight="350.0" prefWidth="760.0">
+<columns>
+<TableColumn fx:id="colCode" prefWidth="70.0" text="Code" />
+<TableColumn fx:id="colFirstName" prefWidth="100.0" text="First Name" />
+<TableColumn fx:id="colLastName" prefWidth="100.0" text="Last Name" />
+<TableColumn fx:id="colEmail" prefWidth="150.0" text="Email" />
+<TableColumn fx:id="colPhone" prefWidth="120.0" text="Phone" />
+<TableColumn fx:id="colBalance" prefWidth="80.0" text="Balance" />
+<TableColumn fx:id="colAddress" prefWidth="130.0" text="Address" />
+</columns>
+</TableView>
+
+<HBox alignment="CENTER" spacing="10.0">
+<Button text="הוספת לקוח (Add)" onAction="#handleAddCustomer"/>
+<Button text="עדכון (Update)" onAction="#handleUpdateCustomer"/>
+<Button text="הזמנות לקוח (Show Orders)" onAction="#handleShowOrders"/>
+<Button text="מסעדות הלקוח (Restaurants)" onAction="#handleShowRestaurants"/>
+<Button text="מסעדות יוקרה (Premium)" onAction="#handleShowPremiumRestaurants"/>
+</HBox>
+<Button text="חזור (Back)" onAction="#handleBack" prefWidth="100.0">
+<VBox.margin>
+<Insets top="10.0" />
+</VBox.margin>
+</Button>
+</VBox>

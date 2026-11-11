@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="controller.NewOrderController" style="-fx-padding: 20;">
+    
+    <Label text="Create New Order" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    
+    <ComboBox fx:id="restaurantComboBox" promptText="Select a Restaurant" prefWidth="250"/>
+    
+    <TextField fx:id="priceField" promptText="Enter Basic Price"/>
+    
+    <Button text="Place Order" onAction="#handlePlaceOrder" style="-fx-background-color: green; -fx-text-fill: white;"/>
+    
+    <Label fx:id="statusLabel" textFill="red"/>
+</VBox>

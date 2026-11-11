@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddRestaurantController" spacing="10" alignment="CENTER" prefWidth="300" prefHeight="350">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    <Label text="Add New Restaurant" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <TextField fx:id="txtCode" promptText="Code (e.g. Re0015)"/>
+    <TextField fx:id="txtName" promptText="Name"/>
+    <TextField fx:id="txtType" promptText="Type (e.g. fast/regular)"/>
+    <TextField fx:id="txtRating" promptText="Rating (e.g. 4.5)"/>
+    <TextField fx:id="txtFee" promptText="Delivery Fee"/>
+    <Button text="Save" onAction="#handleSave"/>
+</VBox>

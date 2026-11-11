@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateRatingController" spacing="15" alignment="CENTER" prefWidth="250" prefHeight="200">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    <Label fx:id="lblRestaurantName" style="-fx-font-weight: bold;"/>
+    <TextField fx:id="txtRating" promptText="Enter new rating"/>
+    <Button text="Update" onAction="#handleUpdate"/>
+</VBox>

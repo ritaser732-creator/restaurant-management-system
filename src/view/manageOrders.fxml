@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="800.0" spacing="10.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.ManageOrdersController">
+<padding>
+<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+</padding>
+<Label text="ניהול הזמנות (Manage Orders)">
+<font>
+<Font name="System Bold" size="24.0" />
+</font>
+</Label>
+
+<HBox alignment="CENTER" spacing="10.0">
+<TextField fx:id="fldOrderCode" promptText="Order Code (e.g. O0001)" prefWidth="150.0"/>
+<Button text="חיפוש הזמנה" onAction="#handleSearchOrder"/>
+<TextField fx:id="fldCustomerCode" promptText="Customer Code" prefWidth="120.0">
+<HBox.margin><Insets left="15.0" /></HBox.margin>
+</TextField>
+<Button text="לפי לקוח" onAction="#handleSearchByCustomer"/>
+<TextField fx:id="fldRestaurantCode" promptText="Restaurant Code" prefWidth="120.0">
+<HBox.margin><Insets left="15.0" /></HBox.margin>
+</TextField>
+<Button text="לפי מסעדה" onAction="#handleSearchByRestaurant"/>
+</HBox>
+<HBox alignment="CENTER" spacing="15.0">
+<VBox.margin><Insets bottom="10.0" /></VBox.margin>
+<Button text="הזמנה יקרה ביותר (Highest Price)" onAction="#handleHighestPrice"/>
+<Button text="נקה מסננים (Clear Filters)" onAction="#handleClearFilters"/>
+</HBox>
+
+<TableView fx:id="tblOrders" prefHeight="350.0" prefWidth="760.0">
+<columns>
+<TableColumn fx:id="colCode" prefWidth="70.0" text="Code" />
+<TableColumn fx:id="colCustomer" prefWidth="90.0" text="Customer" />
+<TableColumn fx:id="colRestaurant" prefWidth="90.0" text="Restaurant" />
+<TableColumn fx:id="colRider" prefWidth="80.0" text="Rider" />
+<TableColumn fx:id="colDate" prefWidth="100.0" text="Date" />
+<TableColumn fx:id="colStatus" prefWidth="100.0" text="Status" />
+<TableColumn fx:id="colBasicPrice" prefWidth="90.0" text="Basic Price" />
+<TableColumn fx:id="colFinalPrice" prefWidth="90.0" text="Final Price" />
+</columns>
+</TableView>
+<Button text="חזור (Back)" onAction="#handleBack" prefWidth="100.0">
+<VBox.margin>
+<Insets top="10.0" />
+</VBox.margin>
+</Button>
+</VBox>

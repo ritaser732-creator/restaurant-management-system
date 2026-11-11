@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox alignment="CENTER" prefHeight="550.0" prefWidth="400.0" spacing="15.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.CustomerDashboardController">
+<children>
+<Label fx:id="lblWelcome" text="Welcome, Customer!">
+<font>
+<Font name="System Bold" size="20.0" />
+</font>
+<VBox.margin>
+<Insets bottom="10.0" />
+</VBox.margin>
+</Label>
+<Button mnemonicParsing="false" onAction="#handleViewDetails" prefWidth="250.0" text="צפייה בפרטים אישיים"/>
+<Button mnemonicParsing="false" onAction="#handleNewOrder" prefWidth="250.0" text="הזמנה חדשה (New Order)"/>
+<Button mnemonicParsing="false" onAction="#handleViewMyOrders" prefWidth="250.0" text="כל ההזמנות שלי"/>
+<Button mnemonicParsing="false" onAction="#handleUpdateDetails" prefWidth="250.0" text="עדכון פרטים (Update Details)"/>
+<Button mnemonicParsing="false" onAction="#handleDeposit" prefWidth="250.0" text="טעינת כסף ליתרה (Deposit Money)"/>
+<Button mnemonicParsing="false" onAction="#handleWithdraw" prefWidth="250.0" text="משיכת כסף (Withdraw Money)"/>
+<Button mnemonicParsing="false" onAction="#handleShowBalance" prefWidth="250.0" text="הצגת יתרה (Show Balance)"/>
+<Button mnemonicParsing="false" onAction="#handleShowRestaurants" prefWidth="250.0" text="שהזמנתי מהן"/>
+<Button mnemonicParsing="false" onAction="#handleShowPremiumRestaurants" prefWidth="250.0" text="יוקרה"/>
+<Button mnemonicParsing="false" onAction="#handleSearchRestaurant" prefWidth="250.0" text="חיפוש מסעדה"/>
+<Button mnemonicParsing="false" onAction="#handleLogout" prefWidth="100.0" text="יציאה (Logout)" textFill="RED">
+<VBox.margin>
+<Insets top="15.0" />
+</VBox.margin>
+</Button>
+</children>
+</VBox>

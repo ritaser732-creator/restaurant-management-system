@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox alignment="CENTER"
+      prefHeight="500.0"
+      prefWidth="400.0"
+      spacing="15.0"
+      xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.SystemAdminDashboardController">
+<children>
+<Label text="System Admin Dashboard">
+<font>
+<Font name="System Bold" size="20.0" />
+</font>
+<VBox.margin>
+<Insets bottom="10.0" />
+</VBox.margin>
+</Label>
+<Button fx:id="btnManageCustomers" mnemonicParsing="false" onAction="#goToManageCustomers" prefWidth="200.0" text="Manage Customers" />
+<Button fx:id="btnManageRestaurants" mnemonicParsing="false" onAction="#goToManageRestaurants" prefWidth="200.0" text="Manage Restaurants" />
+<Button fx:id="btnManageOrders" mnemonicParsing="false" onAction="#goToManageOrders" prefWidth="200.0" text="Manage Orders" />
+<Button fx:id="btnManageRiders" mnemonicParsing="false" onAction="#goToManageRiders" prefWidth="200.0" text="Manage Riders" />
+<Button fx:id="btnManageRestAdmins" mnemonicParsing="false" onAction="#goToManageRestAdmins" prefWidth="200.0" text="Manage Admins" />
+<Button fx:id="btnReports" mnemonicParsing="false" onAction="#goToReports" prefWidth="200.0" text="ומיונים"/>
+<Label text="Data Management" textFill="#555555">
+<VBox.margin>
+<Insets top="10.0" />
+</VBox.margin>
+<font>
+<Font size="14.0" />
+</font>
+</Label>
+<Button fx:id="btnSaveData" mnemonicParsing="false" onAction="#handleSaveData" prefWidth="200.0" text="Save Data" />
+<Button fx:id="btnLoadData" mnemonicParsing="false" onAction="#handleLoadData" prefWidth="200.0" text="Load Data" />
+<Button fx:id="btnLogout" mnemonicParsing="false" onAction="#handleLogout" prefWidth="100.0" text="יציאה">
+<VBox.margin>
+<Insets top="15.0" />
+</VBox.margin>
+</Button>
+</children>
+</VBox>

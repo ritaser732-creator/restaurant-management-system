@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AddOrderController" style="-fx-padding: 20;">
+    <ComboBox fx:id="customerComboBox" promptText="Select Customer"/>
+    <ComboBox fx:id="restaurantComboBox" promptText="Select Restaurant"/>
+    <TextField fx:id="priceField" promptText="Basic Price"/>
+    <Button text="Add Order" onAction="#handleAddOrder"/>
+    <Label fx:id="statusLabel"/>
+</VBox>

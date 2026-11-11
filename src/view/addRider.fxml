@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddRiderController" 
+      spacing="10" alignment="CENTER" prefWidth="300" prefHeight="250">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    
+    <Label text="Add New Rider" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <TextField fx:id="txtId" promptText="Rider ID (e.g. Ri0011)"/>
+    <TextField fx:id="txtName" promptText="Full Name"/>
+    <TextField fx:id="txtPhone" promptText="Phone Number"/>
+    
+    <Button text="Save Rider" onAction="#handleSave" prefWidth="100"/>
+</VBox>

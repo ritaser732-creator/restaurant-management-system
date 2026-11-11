@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="400.0" spacing="15.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.RiderDashboardController">
+<children>
+<Label fx:id="lblWelcome" text="Welcome, Rider!">
+<font>
+<Font name="System Bold" size="20.0" />
+</font>
+<VBox.margin>
+<Insets bottom="10.0" />
+</VBox.margin>
+</Label>
+<Button mnemonicParsing="false" onAction="#handleViewAllAssigned" prefWidth="250.0" text="ההזמנות המשויכות"/>
+<Button mnemonicParsing="false" onAction="#handleViewActiveOrder" prefWidth="250.0" text="הזמנה פעילה"/>
+<Button mnemonicParsing="false" onAction="#handleUpdateStatusToDelivering" prefWidth="250.0" text="Delivering-עדכון ל"/>
+<Button mnemonicParsing="false" onAction="#handleUpdateStatusToDelivered" prefWidth="250.0" text="Delivered-עדכון ל"/>
+<Button mnemonicParsing="false" onAction="#handleViewHistory" prefWidth="250.0" text="היסטוריית משלוחים" />
+<Button mnemonicParsing="false" onAction="#handleTotalDeliveries" prefWidth="250.0" text="סך הכל משלוחים" />
+<Button mnemonicParsing="false" onAction="#handleLogout" prefWidth="100.0" text="יציאה (Logout)" textFill="RED">
+<VBox.margin>
+<Insets top="20.0" />
+</VBox.margin>
+</Button>
+</children>
+</VBox>

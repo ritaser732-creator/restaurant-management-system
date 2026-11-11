@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="controller.AssignRiderController" style="-fx-padding: 20;">
+    
+    <Label text="Enter Order Code:"/>
+    <TextField fx:id="orderCodeField" promptText="e.g., ORD123"/>
+    
+    <Label text="Select Rider:"/>
+    <ComboBox fx:id="riderComboBox" promptText="Select Rider" prefWidth="200"/>
+    
+    <Button text="Assign Rider" onAction="#handleAssign"/>
+    <Label fx:id="statusLabel"/>
+</VBox>

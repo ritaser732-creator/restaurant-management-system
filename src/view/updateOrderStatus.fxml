@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateOrderStatusController" 
+      spacing="15" alignment="CENTER" prefWidth="250" prefHeight="200">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    
+    <Label fx:id="lblRiderName" text="Update Rider Status" style="-fx-font-weight: bold;"/>
+    <ComboBox fx:id="comboStatus" prefWidth="200" promptText="Select Status"/>
+    <Button text="Update Status" onAction="#handleUpdate" prefWidth="100"/>
+</VBox>
